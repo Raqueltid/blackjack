@@ -92,7 +92,7 @@ export class GameComponent {
         //Blackjack
         const win = scores.filter(score => score == 21);    
         if ( win.length > 0 ) {
-            this.endMsg =  (isDealer) ? 'I win!!':'Congratulations, You win1!!';
+            this.endMsg =  (isDealer) ? 'I win!!':'Congratulations, You win!!';
             this.endGame();            
         } else {
             // Major than 21
