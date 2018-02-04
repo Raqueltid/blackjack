@@ -1,0 +1,48 @@
+<div class="game">
+    <div class="row">
+        <div class="col d-flex align-items-center justify-content-start">
+            <dealer></dealer>        
+            <div *ngIf="isFinished">               
+                <div class="alert alert-success" role="alert">
+                        {{endMsg}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row my-2">
+        <div class="col-2"></div>
+        <div class="col">
+            <div class="row">
+                <div class="col d-flex justify-content-start">
+                    <card *ngFor="let dCard of dealer.cards" 
+                        [card]="dCard"
+                        [visible]="dCard.visible">
+                    </card>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col d-flex justify-content-end">
+                    <card *ngFor="let pCard of player.cards" 
+                        [card]="pCard"
+                        [visible]="pCard.visible">
+                    </card>            
+                </div>
+            </div>
+        </div>
+        <div class="col-2"></div>
+    </div>
+    <div class="row">
+        <div class="col d-flex justify-content-end">
+            <player></player>
+        </div>    
+    </div>
+    <div class="row my-2">    
+        <div class="col d-flex justify-content-end"> 
+            <span *ngIf="!isFinished">
+                <button class="btn btn-outline-dark btn-action" (click)="hit()" [disabled]="stickFlg"> HIT </button>  
+                <button class="btn btn-outline-dark btn-action" (click)="stick()"> STICK </button>  
+            </span>       
+            <button class="btn btn-outline-dark btn-action" (click)="initializeGame()"> PLAY AGAIN </button>    
+        </div>
+    </div>
+</div>        

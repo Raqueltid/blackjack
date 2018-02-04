@@ -1,0 +1,22 @@
+.card {
+    text-align: center;
+    .card-shadow {        
+        height: 130px;
+        width: 70px;
+        margin-right: 5px;
+        box-shadow: 5px 5px 1px rgba(0,0,0,0.7);             
+    }
+    .card-hide {
+      color: green;
+      border: 5px dashed green;
+    }
+    .diamond, .heart {
+      color: red;
+      border: 5px dashed red;
+    }
+    .club, .spade {
+      color: black;
+      border: 5px dashed black;
+    }
+}
+  

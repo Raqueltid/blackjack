@@ -1,0 +1,12 @@
+<div class="card" >
+    <div *ngIf="!visible" class="card-shadow card-hide d-flex justify-content-center align-items-center">
+        <h1 class="font-weight-bold">?</h1>   
+    </div> 
+    <div *ngIf="visible" class="card-shadow" [ngClass]="card.type">  
+        <h1>{{ card.label }}</h1>   
+        <img *ngIf="card.type[0] == 'd'" src="./assets/images/diamond.png" alt="diamond">
+        <img *ngIf="card.type[0] == 'h'" src="./assets/images/heart.png" alt="heart">
+        <img *ngIf="card.type[0] == 's'" src="./assets/images/spade.png" alt="spade">
+        <img *ngIf="card.type[0] == 'c'" src="./assets/images/club.png" alt="club">
+    </div>
+</div>    

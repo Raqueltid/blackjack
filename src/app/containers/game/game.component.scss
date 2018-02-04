@@ -1,0 +1,33 @@
+.game {
+    .speech {
+        position: relative;
+        background: #FFFFFF;
+        border: 4px solid #37A050;
+    }
+    .speech:after, .arrow_box:before {
+        right: 100%;
+        top: 50%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+    }
+    
+    .speech:after {
+        border-color: rgba(255, 255, 255, 0);
+        border-right-color: #FFFFFF;
+        border-width: 30px;
+        margin-top: -30px;
+    }
+    .speech:before {
+        border-color: rgba(55, 160, 80, 0);
+        border-right-color: #37A050;
+        border-width: 36px;
+        margin-top: -36px;
+    }    
+    .btn-action {
+        min-width: 130px;
+    }
+}
